@@ -65,20 +65,6 @@ Download node_modules and dependencies:
 $ npm install
 ```
 
-Install DefinatelyTyped and download dependencies:
-
-```
-$ sudo npm install tsd -g
-$ tsd install
-```
-
-Install Bower (if you don't already have it) and download dependencies:
-
-```
-$ sudo npm install bower -g
-$ bower install
-```
-
 Install gulp-cli (if you don't already have it):
 
 ```
@@ -103,6 +89,25 @@ Run TsLint on the source code:
 $ gulp tslint
 ```
 See gulpfile.js for other more granular options.
+
+#### Other Utilities
+
+The project should already contain the content files that these utilities generate; but it's helpful
+to know about them, in case it is necessary to update the contained libraries.
+
+Install DefinatelyTyped and download dependencies:
+
+```
+$ sudo npm install tsd -g
+$ tsd install
+```
+
+Install Bower (if you don't already have it) and download dependencies:
+
+```
+$ sudo npm install bower -g
+$ bower install
+```
 
 ### VSCode integration
 Visual Studio Code is an editor based on the GitHub Electron Shell (Atom), that runs
