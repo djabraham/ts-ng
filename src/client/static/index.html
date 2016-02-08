@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head ng-controller="HeadController">
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+  <title>Tools</title>
+
+  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body ng-controller="BodyController">
+
+  <h2>TypeScript demo with Classic Angular 1.X modules.</h2>
+
+  <h3>A trivial bit of information fetched from the server should appear below.</h3>
+
+  <div id="tasks" ng-controller="TasksController">
+    <span>Task Name:</span> <span>{{ task.name }}</span>
+  </div>
+
+  <script src="lib/jquery/dist/jquery.js"></script>
+
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-resource/angular-resource.js"></script>
+
+  <script src="script/app.js"></script>
+</body>
+
+</html>

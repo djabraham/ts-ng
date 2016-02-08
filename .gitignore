@@ -1,0 +1,16 @@
+# Gulp output is typically excluded, but these examples can be viewed online.
+#dist
+
+# Bower output should be excluded, these are client libs recreated using bower install.
+dist/client/lib
+
+# npm modules should be excluded, these are server modules recreated using npm install.
+node_modules
+
+# The TSD typings folder is typically excluded, just like npm-modules.
+# They can be easily recreated with tsd install, provided tsd.json is present in the root.
+#typings
+
+logs
+*.log
+

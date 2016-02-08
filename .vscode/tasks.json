@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+  "command": "gulp",
+  
+  "isShellCommand": true,
+  "args": [
+    "--no-color"
+  ],
+  "tasks": [
+    {
+      "taskName": "build-client",
+      "problemMatcher": "$tsc",
+      "isBuildCommand": true
+    },
+    {
+      "taskName": "build-server",
+      "problemMatcher": "$tsc",
+      "isBuildCommand": true
+    },
+    {
+      "taskName": "tslint",
+      "args": [],
+      "isBuildCommand": true,
+      "showOutput": "always",
+      "isWatching": false,
+      "problemMatcher": [
+        {
+          "owner": "gulp",
+          "fileLocation": [
+            "relative",
+            "${workspaceRoot}/src"
+          ],
+          "pattern": {
+            "regexp": "\\[[^\\]]+\\] \\[[^\\]]+\\] (\\S+) \\([^\\)]+\\) ([^\\[]+)\\[(\\d+), (\\d+)\\]: (.+)",
+            "file": 2,
+            "line": 3,
+            "column": 4,
+            "severity": 1,
+            "message": 5
+          }
+        }
+      ]
+    }
+  ]
+}
