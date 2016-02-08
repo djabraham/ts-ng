@@ -7,9 +7,13 @@ based on dark.css by Ivan Sagalaev
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #3f3f3f;
+  background: #111;
   color: #dcdcdc;
   -webkit-text-size-adjust: none;
+}
+
+.hljs .pop {
+  background-color: #332;
 }
 
 .hljs-keyword,
@@ -92,7 +96,7 @@ based on dark.css by Ivan Sagalaev
 .apache .hljs-cbracket,
 .tex .hljs-formula,
 .coffeescript .hljs-attribute {
-  color: #cc9393;
+  color: #dd9393;
 }
 
 .hljs-shebang,
@@ -101,7 +105,7 @@ based on dark.css by Ivan Sagalaev
 .hljs-annotation,
 .hljs-pi,
 .hljs-doctype {
-  color: #7f9f7f;
+  color: #7fdf7f;
 }
 
 .coffeescript .javascript,
