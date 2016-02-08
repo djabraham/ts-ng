@@ -1,8 +1,0 @@
-{
-    "listen": 3080,
-    "host": "localhost",
-    "url": "/api",
-    "logging": true,
-    "path": "../data",
-    "file": "stuff.data"
-}

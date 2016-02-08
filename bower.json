@@ -1,20 +1,22 @@
 {
-  "name": "symbolic-layer",
-  "main": "index.js",
-  "version": "0.0.1",
-  "homepage": "https://github.com/djabraham/SymbolicLayer",
-  "authors": [
-    "djabraham <abrahamdanielj@gmail.com>"
+  "name": "ts-ng",
+  "version": "3.2.0",
+  "main": [
+    "js/reveal.js",
+    "css/reveal.css"
   ],
+  "license": "MIT",
+  "description": "TypeScript Angular Demo Pages",
+  "authors": [
+    "Daniel Abraham"
+  ],
+  "dependencies": {
+    "headjs": "~1.0.3"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
-    "dist/client/lib"
-  ],
-  "dependencies": {
-    "angular": "~1.5.0",
-    "angular-resource": "~1.5.0",
-    "font-awesome": "fontawesome#~4.5.0",
-    "jquery": "~2.1.4"
-  }
+    "bower_components",
+    "test"
+  ]
 }
