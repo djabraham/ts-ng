@@ -2,7 +2,7 @@
 #dist
 
 # Bower output should be excluded, these are client libs recreated using bower install.
-dist/lib
+dist/client/lib
 
 # npm modules should be excluded, these are server modules recreated using npm install.
 node_modules
