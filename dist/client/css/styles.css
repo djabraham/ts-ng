@@ -1,0 +1,81 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.icon-bdb {
+  background-color: #ddd;
+  width: 50px;
+  height: 50px;
+}
+
+.task-item .panel {
+  margin-bottom: 10px;
+}
+
+.task-item {
+  overflow: hidden;
+}
+
+.task-name {
+  max-width: 80%;
+}
+
+.task-action {
+  font-size: 1.8em;
+  color: #a00;
+  position: absolute;
+  right: 5px;
+  bottom: 2px;
+}
+
+.task-action:hover {
+  color: #e44;
+  right: 6px;
+  bottom: 3px;
+  text-shadow: 2px 2px 2px #ddd;
+}
+
+.task-action:active {
+  color: #e44;
+  right: 5px;
+  bottom: 2px;
+  text-shadow: none;
+}
+
+.task-icon {
+  vertical-align: middle;
+  padding-right: 4px;
+  position: relative;
+  bottom: 2px;
+  width: 30px;
+}
+
+.task-row {
+  display: block;
+}
+
+.task-row.task-author {
+  font-size: 1.1em;
+}
+
+.task-row.task-author .task-content {
+  font-weight: bold;
+}
+
+.task-label {
+  display: inline-block;
+  min-width: 25%;
+}
+
+.task-content {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
+.wait-spinner {
+  width: 50px;
+  height: 50px;
+}
