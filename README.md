@@ -3,7 +3,7 @@ TypeScript Demo
 
 ### A TypeScript demo with Classic Angular 1.X modules.
 
-This demo is intended to showcase some of the major advantages to using TypeScript.
-The demo does not make use of a packager, such as browserify or webPack. But those
-forms of mosule delivery should work just as well.
+This is the documentation branch (gh-branch) of the http://github.com/djabraham/ts-ng project.
+
+You can just open the Index.html file directly, if you have cloned this repository branch locally.
 

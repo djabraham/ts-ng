@@ -43,7 +43,10 @@
       <section>
         <h2>The Case for TypeScript</h2>
         <p>
-          <small>Created by <a href="https://github.com/djabraham">Daniel Abraham</a></small>
+          Companion slides for the <a target="ts-ng" href="https://github.com/djabraham/ts-ng">TypeScript Angular 1.X Demo Project</a>
+        </p>
+        <p>
+          <small>Created by <a target="dja" href="https://djabraham.github.io/">Daniel Abraham</a></small>
         </p>
       </section>
 
@@ -54,50 +57,84 @@
           provided it's error free.
         </p>
         <p>
-          That's because TypeScript is a so-called superset of JavaScript, intended to extend the language, rather than replace it.
+          That's because TypeScript is a so-called <em>superset</em> of JavaScript, intended to <em>extend the language</em>, rather than replace it.
+        </p>
+      </section>
+
+      <section>
+        <h2>More than a Transpiler</h2>
+        <p>
+          TypeScript has bundled services, designed to run in the background of your favorite IDE, thereby
+          enhancing productivity.
+        </p>
+        <p>
+          TypeScript driven IDE's feature enhancements such as <em>intellisense</em>, <em>validation</em>, <em>refactoring</em>, <em>code completion</em>,
+          <em>JsDoc comments</em>, and <em>early adoption</em> of language improvements.
         </p>
       </section>
 
       <section>
         <h2>TypeScript is Flexible</h2>
         <p>
-          TypeScript uses Structural Typing, also know as Duck Typing, rather than Strong Typing ( if it looks like a duck, walks like…
-          )
+          TypeScript uses <em>Structural Typing</em>, also know as Duck Typing, rather than Strong Typing
+          ( if it looks like a duck, walks like… )
         </p>
         <br />
-        <pre><code class="hljs" data-trim>
+          <pre><code class="hljs" data-trim data-noescape>
 interface IHasLabel {
-  label: string;
+  <span class="pop">label</span>: string;
 }
 
 function sayLabel(isLabeled: IHasLabel) {
-  alert(isLabeled.label);
+  alert(isLabeled.<span class="pop">label</span>);
 }
 
-// This pojo is a valid IHasLabel, because of it's structure
+// This pojo is a valid type of IHasLabel, because of it's structure
 var daffyDuck = {
-  label: "Daffy Duck",
+  <span class="pop">label</span>: "Daffy Duck",
   IQ: NaN
 };
 
 sayLabel(daffyDuck);
-                    </code></pre>
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>TypeScript can Scale</h2>
+        <p>
+          TypeScript addresses some of the <em>biggest challenges</em> in developing massive JavaScript projects, by
+          dealing with <em>complex data types</em> through the use of <em>interfaces</em>.
+        </p>
+        <br />
+          <pre><code class="hljs" data-trim data-noescape>
+// ITree, with property of IBranch      // IBranch, with property of IGoesOnForever
+interface <span class="pop">ITree</span> {                       interface <span class="pop">IBranch</span> {
+  treeId: string;                         /** partial url */
+  loaded: boolean;                        stub: string;
+  nodes: any[];                           route: string;
+  root: {                                 type: string;
+    branch: <span class="pop">IBranch;</span>                      name: string;
+    label: string;                        /** service is marked optional (?) */
+    data: any;                            service?: <span class="pop">IGoesOnForever</span>;
+  }                                     }
+}
+        </code></pre>
       </section>
 
       <section>
         <h2>TypeScript has Generics</h2>
         <p>
-          A simple cache service is shown below, with the addition of a generic argument to
-          help define the promised return value.
+          The simple cache service shown here, has the addition of a generic type argument to
+          help define the promised return data.
         </p>
         <br />
-        <pre><code class="hljs" data-trim data-noescape>
+          <pre><code class="hljs" data-trim data-noescape>
 // Simple low level cache used for fetching data
 export class CacheService {
   static cache = {};
   constructor(private $http, private $q) { }
 
- <span class="pop"> public get&lt;T&gt;(path: string, force?: boolean): angular.IPromise&lt;T&gt; </span> {
+  <span class="pop">public get&lt;T&gt;(path: string, force?: boolean): angular.IPromise&lt;T&gt;</span> {
     var deferred = this.$q.defer();
 
     // if data is cached, promise is resolved now
@@ -108,8 +145,90 @@ export class CacheService {
     ...
         </code></pre>
       </section>
-    </div>
 
+      <section>
+        <h2>Why Use TypeScript?</h2>
+        <p>
+          When calling the cache service shown earlier, <em>generics</em> can describe the complex type returned
+          to help <em>conserve cognitive resources</em>.
+        </p>
+        <br />
+          <pre><code class="hljs" data-trim data-noescape>
+// Fetching data of type ITree from the cache service
+export class CacheConsumer {
+    constructor(private cacheService: CacheService) {
+        var dataPromise = <span class="pop">cacheService.get&lt;ITree&gt;</span>("/data/tree");
+
+        dataPromise.then(function (tree) {
+            console.log(tree.root.branch.stub);
+        })
+    }
+}
+
+
+
+&nbsp;
+        </code></pre>
+        <img class="img-int" src="img/intellisense.png" />
+      </section>
+
+      <section>
+        <h2>TypeScript is Popular</h2>
+        <p>
+          Its declaration syntax is being used to describe <em>thousands</em> of JavaScript libraries
+          that are not now using TypeScript.
+        </p>
+        <p>
+          This very popular GitHub project has over <em>17K contributors</em> and averages about <em>100 commits per week</em>.
+        </p>
+        <p>
+          <a target="definitelytyped" href="http://definitelytyped.org/">http://definitelytyped.org/</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>TypeScript is Relevant</h2>
+        <p>
+          The TypeScript compiler is completely <em>written in TypeScript</em>, and has been <em>open source</em> from day 1 (early 2012).
+        </p>
+        <p>
+          It's <em>community driven</em>, <em>actively supported</em>, and <em>backed</em> by Microsoft, along with their <em>top language experts</em>.
+        </p>
+        <p>
+          <a target="typescript" href="https://github.com/Microsoft/TypeScript">https://github.com/Microsoft/TypeScript</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>TypeScript has Tooling</h2>
+        <p>
+          Another amazing <em>open source</em> project originating from Microsoft, is their Visual Studio Code IDE (<em>VSCode</em> for short).
+        </p>
+        <p>
+          It's based on the GitHub Electron Shell, basis for their Atom Editor. So it runs on <em>all 3 major platforms</em>.
+        </p>
+        <p>
+          <a target="vscode" href="https://github.com/Microsoft/vscode">https://github.com/Microsoft/vscode</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>The End</h2>
+        <p>
+          This introduction is over, but the demo project below can be used to play with some of the concepts presented here.
+        </p>
+        <p>
+          Just make sure your IDE supports TypeScript enhancements, or simply download VSCode if in doubt.
+        </p>
+        <p>
+          <a target="ts-ng" href="https://github.com/djabraham/ts-ng">https://github.com/djabraham/ts-ng</a>
+        </p>
+        <p>
+          <a target="vscode" href="https://github.com/Microsoft/vscode">https://github.com/Microsoft/vscode</a>
+        </p>
+      </section>
+
+    </div>
   </div>
 
   <script src="lib/js/head.min.js"></script>

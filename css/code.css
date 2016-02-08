@@ -7,13 +7,24 @@ based on dark.css by Ivan Sagalaev
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #111;
+  background: #000;
   color: #dcdcdc;
   -webkit-text-size-adjust: none;
 }
 
 .hljs .pop {
-  background-color: #332;
+  border-bottom: 1px solid #aa0;
+  /* background-color: #430; */
+}
+
+.reveal section img.img-int {
+  margin: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  position: absolute;
+  top: 70%;
+  left: 47%;
 }
 
 .hljs-keyword,
@@ -105,7 +116,7 @@ based on dark.css by Ivan Sagalaev
 .hljs-annotation,
 .hljs-pi,
 .hljs-doctype {
-  color: #7fdf7f;
+  color: #6fdf7f;
 }
 
 .coffeescript .javascript,
