@@ -16,19 +16,19 @@ export var Tasks: Shared.ISearchResults = {
         "max_score": 0.17898238,
         "hits": [
           {
-            "_index": "bdb",
+            "_index": "big",
             "_type": "tasks",
-            "_id": "515c480fb3515bcc16000003",
+            "_id": "515c480XXXXXX",
             "_score": 0.17898238,
             "_source": {
-              "_id": "515c480fb3515bcc16000003",
+              "_id": "515c480fb3XXXXXX",
               "description": "Extracts the the output of...",
               "forks": [],
               "labels": [
                 ":Nexus"
               ],
               "minutes_saved": 10,
-              "name": "extract_accounting_log",
+              "name": "extract_log",
               "service": "python",
               "updated_at": "2014-05-21T15:21:03.449Z",
               "uses": 14,
@@ -49,15 +49,15 @@ export var Tasks: Shared.ISearchResults = {
           "sum_other_doc_count": 5835,
           "buckets": [
             {
-              "key": "mamorten",
+              "key": "kelly",
               "doc_count": 417
             },
             {
-              "key": "jajohnst",
+              "key": "john",
               "doc_count": 328
             },
             {
-              "key": "jrode",
+              "key": "phil",
               "doc_count": 187
             }
           ]
