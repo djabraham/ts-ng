@@ -1,5 +1,6 @@
 TypeScript Demo
 ==
+#### Note This demo is obsolete. You should use the Angular CLI, if at all possible. It can create 1.x Angular project too!
 
 ### A TypeScript demo with Classic Angular 1.X modules.
 
