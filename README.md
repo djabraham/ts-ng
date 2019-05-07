@@ -12,7 +12,7 @@ The use of Visual Studio Code is optional, but an IDE with TypeScript Support
 is highly recommended, so the full benefits of using TypeScript can be realized.
 
 * Sublime Text (demo version available)
-* WebStorm (commerical only)
+* WebStorm (commercial only)
 * Eclipse (free)
 
 For more tools, see the [DefinatelyTyped](http://definitelytyped.org/directory/tools.html)
@@ -30,7 +30,7 @@ wiki pages.
 * Simple Angular 1.X Client
 
 The client is output into a single js file, while the server retains the
-seperate module files that are more suitable for node. These module systems are
+separate module files that are more suitable for node. These module systems are
 often referred to as internal/external within the TypeScript community.
 
 A shared type definition file is provided to demonstrate how it would be useful on
